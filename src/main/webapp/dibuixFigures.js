@@ -17,7 +17,7 @@ function dibuixaCercle(x, y, tamany) {
 function dibuixaQuadrat(x, y, tamany) {
 	console.log("Entra en quadrat" + x + " " + y + " " + tamany)
 	ctx.beginPath();
-	ctx.rect(x, y, tamany, tamany);
+	ctx.rect(x-(tamany/2), y-(tamany/2), tamany, tamany);
 	ctx.stroke();
 }
 
