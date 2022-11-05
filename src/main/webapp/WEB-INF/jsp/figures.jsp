@@ -6,34 +6,28 @@
 <head>
     <title>Figures Geomètriques</title>
     <style>
-        canvas{
+        canvas {
+            width: 1024px;
+            height: 480;
             background-color: white;
             border:1px solid black;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <h1>Figures Geomètriques</h1>
-
     <header></header>
 
     <main>
+        <h1>Figures Geomètriques</h1>
+
         <form method="post" action"/figures">
-            <br>
-            <canvas id="canvas" width="500" height="500"></canvas>
-
-            <br><br>
-
-            <label>Coordenada x:</label>
-            <input type="number" name="coordenadaX">
-
-            <label>Coordenada y:</label>
-            <input type="number" name="coordenadaY">
+            <canvas id="canvas"></canvas>
 
             <br>
 
             <label>Tipus de figura:</label>
-            <select name="servei">
+            <select id="figura" name="servei">
                 <option value="blanc"> </option>
                 <option value="cercle">Cercle</option>
                 <option value="quadrat">Quadrat</option>
@@ -44,27 +38,41 @@
 
             <br>
 
-            <label>Nom:</label>
-            <input type="text" name="nom">
+            <label>Coordenada X:</label>
+            <input id="x" type="number" name="coordenadaX">
+
+            <label>Coordenada Y:</label>
+            <input id="y" type="number" name="coordenadaY">
 
             <br>
 
-            <label>Grandària:</label>
-            <input type="range" name="grandaria">
+            <label>Tamany:</label>
+            <input id="tamany" type="range" name="grandaria" min="10" max="100">
+
+            <br>
+
+            <label>Nom:</label>
+            <input id="nom" type="text" name="nom">
 
             <br>
 
             <label>Color:</label>
-            <select name="servei">
+            <select id="color" name="color">
                 <option value="blanc"> </option>
-                <option value="negro">Negre</option>
-                <option value="verd">Verd</option>
-                <option value="vermell">Vermell</option>
-                <option value="blai">Blau</option>
-                <option value="groc">Groc</option>
-                <option value="gris">Gris</option>
+                <option id="black" value="black">Black</option>
+                <option id="green" value="green">Green</option>
+                <option id="red" value="red">Red</option>
+                <option id="blue" value="blue">Blue</option>
+                <option id="yellow" value="yellow">Yellow</option>
+                <option id="grey" value="grey">Grey</option>
             </select>
+
+            <br>
+
+            <button type="button" onclick="visualitza()">Visualitza</button>
         </form>
     </main>
+
+    <script src="../../../dibuixFigures.js"></script>
 </body>
 </html>
