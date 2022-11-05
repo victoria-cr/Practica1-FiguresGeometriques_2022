@@ -10,7 +10,7 @@
             width: 1024px;
             height: 480;
             background-color: white;
-            border:1px solid black;
+            border: 1px solid black;
             display: block;
         }
     </style>
