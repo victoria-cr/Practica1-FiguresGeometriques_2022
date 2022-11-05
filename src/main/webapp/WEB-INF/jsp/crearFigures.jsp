@@ -27,7 +27,7 @@
             <br>
 
             <label>Tipus de figura:</label>
-            <select id="figura" name="servei">
+            <select id="figura" name="figura">
                 <option value="blanc"> </option>
                 <option value="cercle">Cercle</option>
                 <option value="quadrat">Quadrat</option>
@@ -47,7 +47,7 @@
             <br>
 
             <label>Tamany:</label>
-            <input id="tamany" type="range" name="grandaria" min="10" max="100">
+            <input id="tamany" type="range" name="tamany" min="10" max="100">
 
             <br>
 
@@ -70,6 +70,7 @@
             <br>
 
             <button type="button" onclick="visualitza()">Visualitza</button>
+            <button type="submit">Crear figura</button>
         </form>
     </main>
 

@@ -19,6 +19,11 @@ public class Figures extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        String figura = req.getParameter("figura");
+        String coordenadaX = req.getParameter("coordenadaX");
+        String coordenadaY = req.getParameter("coordenadaY");
+        String tamany = req.getParameter("tamany");
+        String nom = req.getParameter("nom");
+        String color = req.getParameter("color");
     }
 }
