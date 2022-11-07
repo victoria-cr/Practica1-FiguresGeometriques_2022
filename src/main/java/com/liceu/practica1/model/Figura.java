@@ -1,6 +1,7 @@
 package com.liceu.practica1.model;
 
 public class Figura {
+    int figuraID;
     String figura;
     String coordenadaX;
     String coordenadaY;
@@ -15,6 +16,14 @@ public class Figura {
         this.tamany = tamany;
         this.nom = nom;
         this.color = color;
+    }
+
+    public int getFiguraID() {
+        return figuraID;
+    }
+
+    public void setFiguraID(int figuraID) {
+        this.figuraID = figuraID;
     }
 
     public String getFigura() {

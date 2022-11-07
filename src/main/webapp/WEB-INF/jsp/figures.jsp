@@ -8,25 +8,25 @@
     <style>
         canvas {
             width: 1024px;
-            height: 768;
+            height: 768px;
             background-color: white;
             border: 1px solid black;
-            display: block;
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="">Crear una figura</a>
-        <a href="">Totes les figures creades</a>
-        <a href="">Les teves figures</a>
+        <a href="/figures">Crear una figura</a>
+        <a href="/figuresCreades">Totes les figures creades</a>
+        <a href="/lesTevesFigures">Les teves figures</a>
     </header>
 
     <main>
         <h1>Figures Geomètriques</h1>
 
+        <canvas id="canvas"></canvas>
+
         <form method="post" action"/figures">
-            <canvas id="canvas"></canvas>
 
             <br>
 
