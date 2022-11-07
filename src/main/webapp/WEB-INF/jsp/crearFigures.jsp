@@ -8,7 +8,7 @@
     <style>
         canvas {
             width: 1024px;
-            height: 480;
+            height: 768;
             background-color: white;
             border: 1px solid black;
             display: block;
@@ -16,7 +16,11 @@
     </style>
 </head>
 <body>
-    <header></header>
+    <header>
+        <a href="">Crear una figura</a>
+        <a href="">Totes les figures creades</a>
+        <a href="">Les teves figures</a>
+    </header>
 
     <main>
         <h1>Figures Geomètriques</h1>

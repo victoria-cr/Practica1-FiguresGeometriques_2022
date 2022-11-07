@@ -50,7 +50,7 @@ function dibuix(figura){
 		dibuixaQuadrat(this.x, this.y, this.tamany);
 	}
 	if(figura == "triangle"){
-		console.log("Entra en dibuix-quadrat");
+		console.log("Entra en dibuix-triangle");
 		dibuixaTriangle(this.x, this.y, this.tamany);
 	}
 }

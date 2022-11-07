@@ -1,5 +1,7 @@
 package com.liceu.practica1.controllers;
 
+import com.liceu.practica1.model.Figura;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,5 +27,7 @@ public class Figures extends HttpServlet {
         String tamany = req.getParameter("tamany");
         String nom = req.getParameter("nom");
         String color = req.getParameter("color");
+
+        Figura figura1 = new Figura(figura,coordenadaX,coordenadaY,tamany,nom,color);
     }
 }
