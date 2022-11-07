@@ -31,6 +31,7 @@
                 <th>Type</th>
                 <th>Color</th>
                 <th>Size</th>
+                <th>Usuari</th>
             </tr>
             <c:forEach var="figureList" items="${figureList}">
                 <tr>
@@ -41,6 +42,7 @@
                     <td>${figureList.figura}</td>
                     <td>${figureList.color}</td>
                     <td>${figureList.tamany}</td>
+                    <td>${figureList.usuariID}</td>
                 </tr>
             </c:forEach>
         </table>

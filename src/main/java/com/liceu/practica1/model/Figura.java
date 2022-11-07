@@ -8,14 +8,16 @@ public class Figura {
     String tamany;
     String nom;
     String color;
+    int usuariID;
 
-    public Figura(String figura, String coordenadaX, String coordenadaY, String tamany, String nom, String color) {
+    public Figura(String figura, String coordenadaX, String coordenadaY, String tamany, String nom, String color, int usuariID) {
         this.figura = figura;
         this.coordenadaX = coordenadaX;
         this.coordenadaY = coordenadaY;
         this.tamany = tamany;
         this.nom = nom;
         this.color = color;
+        this.usuariID = usuariID;
     }
 
     public int getFiguraID() {
@@ -74,15 +76,25 @@ public class Figura {
         this.color = color;
     }
 
+    public int getUsuariID() {
+        return usuariID;
+    }
+
+    public void setUsuariID(int usuariID) {
+        this.usuariID = usuariID;
+    }
+
     @Override
     public String toString() {
         return "Figura{" +
-                "figura='" + figura + '\'' +
+                "figuraID=" + figuraID +
+                ", figura='" + figura + '\'' +
                 ", coordenadaX='" + coordenadaX + '\'' +
                 ", coordenadaY='" + coordenadaY + '\'' +
                 ", tamany='" + tamany + '\'' +
                 ", nom='" + nom + '\'' +
                 ", color='" + color + '\'' +
+                ", usuariID=" + usuariID +
                 '}';
     }
 }
