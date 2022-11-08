@@ -1,5 +1,7 @@
 package com.liceu.practica1.model;
 
+import java.util.Date;
+
 public class Figura {
     int figuraID;
     String figura;
@@ -9,6 +11,7 @@ public class Figura {
     String nom;
     String color;
     int usuariID;
+    String date;
 
     public Figura(String figura, String coordenadaX, String coordenadaY, String tamany, String nom, String color, int usuariID) {
         this.figura = figura;
@@ -18,6 +21,7 @@ public class Figura {
         this.nom = nom;
         this.color = color;
         this.usuariID = usuariID;
+        setDate();
     }
 
     public int getFiguraID() {
@@ -84,6 +88,14 @@ public class Figura {
         this.usuariID = usuariID;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate() {
+        this.date = new Date(System.currentTimeMillis()).toString();
+    }
+
     @Override
     public String toString() {
         return "Figura{" +
@@ -95,6 +107,7 @@ public class Figura {
                 ", nom='" + nom + '\'' +
                 ", color='" + color + '\'' +
                 ", usuariID=" + usuariID +
+                ", date='" + date + '\'' +
                 '}';
     }
 }

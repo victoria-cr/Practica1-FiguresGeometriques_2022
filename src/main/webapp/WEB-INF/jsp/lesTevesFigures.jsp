@@ -14,7 +14,7 @@
 
     <main>
         <h1>Les teves figures</h1>
-        <table>
+<table>
             <tr>
                 <th>ID figura</th>
                 <th>Nom figura</th>
@@ -26,6 +26,7 @@
                 <th>ID de usuari</th>
                 <th>Data de creació</th>
                 <th>Visualitzar</th>
+                <th>Esborrar</th>
             </tr>
             <c:forEach var="figureList" items="${figureList}">
                 <tr>
@@ -37,7 +38,21 @@
                     <td>${figureList.color}</td>
                     <td>${figureList.tamany}</td>
                     <td>${figureList.usuariID}</td>
+                    <td>${figureList.date}</td>
+                    <td>
+                        <form action="/visualitzarFigura" method="post">
+                            <input type="hidden" value="${figureList.figuraID}" name="figuraID">
+                            <input type="submit" value="Veure figura">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/esborrarFigura" method="post">
+                            <input type="hidden" value="${figureList.figuraID}" name="figuraID">
+                            <input type="submit" value="Esborrar figura">
+                        </form>
+                    </td>
                 </tr>
+                <td>
             </c:forEach>
         </table>
     </main>

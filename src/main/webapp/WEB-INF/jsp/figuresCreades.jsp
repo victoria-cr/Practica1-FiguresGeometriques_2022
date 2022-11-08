@@ -37,7 +37,7 @@
     </header>
 
     <main>
-        <h1>Figures Creades</h1>
+        <h1>Figures creades</h1>
         <table>
             <tr>
                 <th>ID figura</th>
@@ -48,6 +48,7 @@
                 <th>Color</th>
                 <th>Tamany</th>
                 <th>ID de usuari</th>
+                <th>Data de creació</th>
                 <th>Visualitzar</th>
                 <th>Esborrar</th>
             </tr>
@@ -61,6 +62,7 @@
                     <td>${figureList.color}</td>
                     <td>${figureList.tamany}</td>
                     <td>${figureList.usuariID}</td>
+                    <td>${figureList.date}</td>
                     <td>
                         <form action="/visualitzarFigura" method="post">
                             <input type="hidden" value="${figureList.figuraID}" name="figuraID">
