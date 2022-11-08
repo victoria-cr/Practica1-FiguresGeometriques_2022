@@ -16,4 +16,17 @@ public class FiguraDAOImpl implements FiguraDAO {
     public List<Figura> getFiguresCreades() {
         return figuresCreades;
     }
+
+    public Object llistaPerUsuari(int usuariID) {
+        List<Figura> figuresIDUsuari = new ArrayList<>();
+        for (Figura figura : figuresCreades) {
+            if (figura.getUsuariID() == usuariID) {
+                figuresIDUsuari.add(figura);
+            }
+        }
+        return figuresIDUsuari;
+    }
+
+    // 1. hola
+    // 2. adios
 }

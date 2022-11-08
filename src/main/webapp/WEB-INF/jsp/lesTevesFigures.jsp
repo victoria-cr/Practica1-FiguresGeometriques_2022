@@ -43,19 +43,7 @@
                     <td>${figureList.color}</td>
                     <td>${figureList.tamany}</td>
                     <td>${figureList.usuariID}</td>
-                    <td>
-                        <form action="/view" method="post">
-                            <input type="hidden" value="${figureList.figuraID}" name="FiguraID">
-                            <input type="submit" value="View">
-                        </form>
-                        <form action="/delete" method="post">
-                            <input type="hidden" value="${figureList.figuraID}" name="FiguraID">
-                            <input type="hidden" value="${figureList.usuariID}" name="UsuariID">
-                            <input type="button" value="Delete">
-                        </form>
-                    </td>
                 </tr>
-                <td>
             </c:forEach>
         </table>
     </main>

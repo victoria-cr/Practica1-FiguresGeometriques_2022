@@ -18,4 +18,8 @@ public class FiguraService {
     public List<Figura> retornarLlista() {
         return figuraDAOimpl.getFiguresCreades();
     }
+
+    public Object retornarLlistaPerIDUsuari(int usuariID) {
+        return figuraDAOimpl.llistaPerUsuari(usuariID);
+    }
 }
