@@ -73,7 +73,7 @@
 
             <br>
 
-            <button type="button" onclick="visualitza()">Visualitza</button>
+            <button type="button" onclick="previsualitza()">Visualitza</button>
             <button type="submit">Crear figura</button>
         </form>
     </main>

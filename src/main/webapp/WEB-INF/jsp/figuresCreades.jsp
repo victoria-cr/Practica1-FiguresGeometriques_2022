@@ -44,7 +44,7 @@
                     <td>${figureList.tamany}</td>
                     <td>${figureList.usuariID}</td>
                     <td>
-                        <form action="/view" method="post">
+                        <form action="/visualitzarFigura" method="post">
                             <input type="hidden" value="${figureList.figuraID}" name="FiguraID">
                             <input type="submit" value="View">
                         </form>

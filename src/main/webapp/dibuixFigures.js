@@ -28,7 +28,7 @@ function dibuixaTriangle(x, y, tamany) {
 	ctx.stroke();
 }
 
-function visualitza() {
+function previsualitza() {
 	this.figura = document.getElementById("figura").value;
 	this.x = document.getElementById("x").value;
 	this.y = document.getElementById("y").value;
