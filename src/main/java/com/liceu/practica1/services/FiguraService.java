@@ -22,4 +22,17 @@ public class FiguraService {
     public Object retornarLlistaPerIDUsuari(int usuariID) {
         return figuraDAOimpl.llistaPerUsuari(usuariID);
     }
+
+    public Figura retornarPerIDFigura(int IDFigura) {
+        for (Figura figura : retornarLlista()) {
+            if (figura.getFiguraID() == IDFigura) {
+                return figura;
+            }
+        }
+        return null;
+    }
+
+    public void esborrarFigura(int IDFigura) {
+        figuraDAOimpl.esborrarFigura(IDFigura);
+    }
 }

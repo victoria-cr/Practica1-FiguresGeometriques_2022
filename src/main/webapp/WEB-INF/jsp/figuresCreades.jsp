@@ -6,6 +6,10 @@
 <head>
     <title>Figures Geomètriques</title>
     <style>
+        nav {
+
+        }
+
         table {
             text-align: center;
             font-family: 'Oswald', sans-serif;
@@ -25,9 +29,11 @@
 </head>
 <body>
     <header>
-        <a href="/figures">Crear una figura</a>
-        <a href="/figuresCreades">Totes les figures creades</a>
-        <a href="/lesTevesFigures">Les teves figures</a>
+        <nav>
+            <a href="/figures">Crear una figura</a>
+            <a href="/figuresCreades">Totes les figures creades</a>
+            <a href="/lesTevesFigures">Les teves figures</a>
+        </nav>
     </header>
 
     <main>
@@ -43,6 +49,7 @@
                 <th>Tamany</th>
                 <th>ID de usuari</th>
                 <th>Visualitzar</th>
+                <th>Esborrar</th>
             </tr>
             <c:forEach var="figureList" items="${figureList}">
                 <tr>
@@ -56,8 +63,14 @@
                     <td>${figureList.usuariID}</td>
                     <td>
                         <form action="/visualitzarFigura" method="post">
-                            <input type="hidden" value="${figureList.figuraID}" name="FiguraID">
+                            <input type="hidden" value="${figureList.figuraID}" name="figuraID">
                             <input type="submit" value="Veure figura">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/esborrarFigura" method="post">
+                            <input type="hidden" value="${figureList.figuraID}" name="figuraID">
+                            <input type="submit" value="Esborrar figura">
                         </form>
                     </td>
                 </tr>

@@ -1,6 +1,5 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,14 +16,16 @@
         <h1>Les teves figures</h1>
         <table>
             <tr>
-                <th>Figure ID</th>
-                <th>Figure Name</th>
-                <th>X</th>
-                <th>Y</th>
-                <th>Type</th>
+                <th>ID figura</th>
+                <th>Nom figura</th>
+                <th>Coordenada x</th>
+                <th>Coordenada y</th>
+                <th>Tipus de figura</th>
                 <th>Color</th>
-                <th>Size</th>
-                <th>Usuari</th>
+                <th>Tamany</th>
+                <th>ID de usuari</th>
+                <th>Data de creació</th>
+                <th>Visualitzar</th>
             </tr>
             <c:forEach var="figureList" items="${figureList}">
                 <tr>
