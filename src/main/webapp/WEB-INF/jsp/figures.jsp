@@ -5,14 +5,6 @@
 <html>
 <head>
     <title>Figures Geomètriques</title>
-    <style>
-        canvas {
-            width: 1024px;
-            height: 768px;
-            background-color: white;
-            border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -24,7 +16,7 @@
     <main>
         <h1>Figures Geomètriques</h1>
 
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" width="1024" height="768" style="border:1px solid black;background-color: white;"></canvas>
 
         <form method="post" action"/figures">
 
@@ -51,7 +43,7 @@
             <br>
 
             <label>Tamany:</label>
-            <input id="tamany" type="range" name="tamany" min="10" max="100">
+            <input id="tamany" type="range" name="tamany" min="50" max="300">
 
             <br>
 

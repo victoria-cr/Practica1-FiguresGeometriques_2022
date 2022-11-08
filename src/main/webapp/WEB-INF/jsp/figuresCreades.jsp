@@ -5,14 +5,6 @@
 <html>
 <head>
     <title>Figures Geomètriques</title>
-    <style>
-        canvas {
-            width: 1024px;
-            height: 768;
-            background-color: white;
-            border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -22,6 +14,7 @@
     </header>
 
     <main>
+        <h1>Figures Creades</h1>
         <table>
             <tr>
                 <th>Figure ID</th>
@@ -46,7 +39,7 @@
                     <td>
                         <form action="/visualitzarFigura" method="post">
                             <input type="hidden" value="${figureList.figuraID}" name="FiguraID">
-                            <input type="submit" value="visualitzarFigura">
+                            <input type="submit" value="Veure figura">
                         </form>
                     </td>
                 </tr>
