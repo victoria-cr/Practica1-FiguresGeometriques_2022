@@ -5,6 +5,23 @@
 <html>
 <head>
     <title>Figures Geomètriques</title>
+    <style>
+        table {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            margin: 20px;
+            border: 4px;
+            border-style: solid;
+        }
+
+        th {
+            font-size: 14pt;
+            font-weight: 700;
+            padding: 10px;
+            border: 2px;
+            border-style: solid;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,14 +34,15 @@
         <h1>Figures Creades</h1>
         <table>
             <tr>
-                <th>Figure ID</th>
-                <th>Figure Name</th>
-                <th>X</th>
-                <th>Y</th>
-                <th>Type</th>
+                <th>ID figura</th>
+                <th>Nom figura</th>
+                <th>Coordenada x</th>
+                <th>Coordenada y</th>
+                <th>Tipus de figura</th>
                 <th>Color</th>
-                <th>Size</th>
-                <th>Usuari</th>
+                <th>Tamany</th>
+                <th>ID de usuari</th>
+                <th>Visualitzar</th>
             </tr>
             <c:forEach var="figureList" items="${figureList}">
                 <tr>
