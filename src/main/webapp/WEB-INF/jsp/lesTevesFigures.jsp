@@ -1,6 +1,7 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <title>Figures Geomètriques</title>
@@ -14,7 +15,7 @@
 
     <main>
         <h1>Les teves figures</h1>
-<table>
+        <table>
             <tr>
                 <th>ID figura</th>
                 <th>Nom figura</th>
