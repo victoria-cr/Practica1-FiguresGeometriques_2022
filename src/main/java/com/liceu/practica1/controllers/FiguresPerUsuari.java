@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/lesTevesFigures")
+@WebServlet("/lesMevesFigures")
 public class FiguresPerUsuari extends HttpServlet {
     FiguraService figuraService = new FiguraService();
 
@@ -24,7 +24,7 @@ public class FiguresPerUsuari extends HttpServlet {
         System.out.println(figuraService.retornarLlista());
         System.out.println(req.getParameter("figureList"));
         RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/figuresCreades.jsp");
+                req.getRequestDispatcher("/WEB-INF/jsp/lesMevesFigures.jsp");
         dispatcher.forward(req, resp);
     }
 
@@ -32,7 +32,7 @@ public class FiguresPerUsuari extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("figureList", figuraService.retornarLlista());
         RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/figuresCreades.jsp");
+                req.getRequestDispatcher("/WEB-INF/jsp/lesMevesFigures.jsp");
         dispatcher.forward(req, resp);
     }
 }

@@ -5,16 +5,87 @@
 <html>
 <head>
     <title>Figures Geomètriques</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-size: 16px;
+            background-color: #ecf0f1;
+            font-family: 'Quicksand';
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        li {
+            margin: 10px 50px;
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 0px 20px;
+            color: black;
+        }
+
+        h1 {
+            color: black;
+            text-shadow: 2px 2px #bdc3c7;
+            text-align: center;
+            text-transform:uppercase;
+            font-weight: lighter;
+            font-size: 30px;
+            letter-spacing: 0.2em;
+            padding: 20px 0px;
+        }
+
+        table {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            margin: 20px;
+            border: 4px;
+            border-style: solid;
+        }
+
+        th {
+            font-size: 14pt;
+            font-weight: 700;
+            padding: 10px;
+            border: 2px;
+            border-style: solid;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <a href="/figures">Crear una figura</a>
-        <a href="/figuresCreades">Totes les figures creades</a>
-        <a href="/lesTevesFigures">Les teves figures</a>
+        <nav>
+            <ul>
+                <li><a href="/figures">Crear una figura</a></li>
+                <li><a href="/figuresCreades">Totes les figures creades</a></li>
+                <li><a href="/lesMevesFigures">Les meves figures</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h1>Les teves figures</h1>
+        <h1>Les meves figures</h1>
         <table>
             <tr>
                 <th>ID figura</th>
