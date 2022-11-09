@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/esborrarFigura")
@@ -24,11 +25,19 @@ public class EsborrarFigura extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        int IDusuari = (int) (session.getAttribute("usuariID"));
         int IDfigura = Integer.parseInt(req.getParameter("figuraID"));
-        figuraService.esborrarFigura(IDfigura);
-        req.setAttribute("figureList", figuraService.retornarLlista());
-        RequestDispatcher dispatcher =
-                req.getRequestDispatcher("/WEB-INF/jsp/figuresCreades.jsp");
-        dispatcher.forward(req, resp);
+
+        if (figuraService.retornarPerIDFigura(IDfigura).getUsuariID() == IDusuari) {
+            figuraService.esborrarFigura(IDfigura);
+            req.setAttribute("figureList", figuraService.retornarLlista());
+            resp.sendRedirect("/figuresCreades");
+        } else {
+            req.setAttribute("figureList", figuraService.retornarLlista());
+            RequestDispatcher dispatcher =
+                    req.getRequestDispatcher("/WEB-INF/jsp/figuresCreades.jsp");
+            dispatcher.forward(req, resp);
+        }
     }
 }
