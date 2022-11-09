@@ -6,6 +6,8 @@ public interface FiguraDAO {
     void guardarFigura(Figura figura);
 
     Object llistaPerUsuari(int usuariID);
-    
+
+    Figura llistaPerFigura(int figuraID);
+
     void esborrarFigura(int IDFigura);
 }

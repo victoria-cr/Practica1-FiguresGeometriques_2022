@@ -29,7 +29,7 @@ public class EsborrarFigura extends HttpServlet {
         int IDusuari = (int) (session.getAttribute("usuariID"));
         int IDfigura = Integer.parseInt(req.getParameter("figuraID"));
 
-        if (figuraService.retornarPerIDFigura(IDfigura).getUsuariID() == IDusuari) {
+        if (figuraService.retornarLlistaPerIDFigura(IDfigura).getUsuariID() == IDusuari) {
             figuraService.esborrarFigura(IDfigura);
             req.setAttribute("figureList", figuraService.retornarLlista());
             resp.sendRedirect("/figuresCreades");

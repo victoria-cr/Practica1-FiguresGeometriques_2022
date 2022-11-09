@@ -27,6 +27,15 @@ public class FiguraDAOImpl implements FiguraDAO {
         return figuresIDUsuari;
     }
 
+    public Figura llistaPerFigura(int figuraID) {
+        for (Figura figura : getFiguresCreades()) {
+            if (figura.getFiguraID() == figuraID) {
+                return figura;
+            }
+        }
+        return null;
+    }
+
     public void esborrarFigura(int IDFigura) {
         for (int i = 0; i < figuresCreades.size(); i++) {
             if (IDFigura == figuresCreades.get(i).getFiguraID()) {

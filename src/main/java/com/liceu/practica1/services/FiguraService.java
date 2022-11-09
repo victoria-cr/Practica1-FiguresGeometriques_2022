@@ -23,13 +23,8 @@ public class FiguraService {
         return figuraDAOimpl.llistaPerUsuari(usuariID);
     }
 
-    public Figura retornarPerIDFigura(int IDFigura) {
-        for (Figura figura : retornarLlista()) {
-            if (figura.getFiguraID() == IDFigura) {
-                return figura;
-            }
-        }
-        return null;
+    public Figura retornarLlistaPerIDFigura(int figuraID) {
+        return figuraDAOimpl.llistaPerFigura(figuraID);
     }
 
     public void esborrarFigura(int IDFigura) {
