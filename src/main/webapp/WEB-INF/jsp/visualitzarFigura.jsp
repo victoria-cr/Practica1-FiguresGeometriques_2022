@@ -81,28 +81,26 @@
             var color = "${color}";;
 
             function dibuixaCercle(x, y, tamany) {
-                console.log("Entra en circulo" + x + " " + y + " " + tamany)
-                ctx.beginPath();
-                ctx.arc(x, y, tamany, 0, 2*Math.PI);
-                ctx.stroke();
+            	ctx.beginPath();
+            	ctx.arc(x, y, tamany, 0, 2*Math.PI);
+            	ctx.stroke();
             }
 
             function dibuixaQuadrat(x, y, tamany) {
-                console.log("Entra en quadrat" + x + " " + y + " " + tamany)
-                ctx.beginPath();
-                ctx.rect(x-(tamany/2), y-(tamany/2), tamany, tamany);
-                ctx.stroke();
+            	ctx.beginPath();
+            	ctx.rect(x-(tamany/2), y-(tamany/2), tamany, tamany);
+            	ctx.stroke();
             }
 
-            function dibuixaTriangle(x, y, tamany) {
-                console.log("Entra en triangle " + x + " " + y + " " + tamany)
-                ctx.beginPath();
-                var centre =((Math.sqrt(3)*tamany)/2) / 2;
-                console.log("Centre del triangle " + centre)
-                ctx.moveTo(x, y + centre);
-                ctx.lineTo(x + (tamany/2), (y - centre));
-                ctx.lineTo(x - tamany/2, y + centre);
-                ctx.lineTo(x, y - centre);
+            function dibuixaPentagon(x, y, tamany) {
+            	var nombreDeCostats = 5,
+            	    costat  = 2 * Math.PI / nombreDeCostats,
+            	    canviDeCostat = (Math.PI / 180.0) * -18;
+            	ctx.beginPath();
+                for (var i = 0; i <= nombreDeCostats;i++) {
+                    var costatActual = i * costat + canviDeCostat;
+                    ctx.lineTo (Number(x) + tamany * Math.cos(costatActual), Number(y) + tamany * Math.sin(costatActual));
+                }
                 ctx.stroke();
             }
 
@@ -113,16 +111,13 @@
 
             function dibuix(figura){
                 if(figura == "cercle"){
-                    console.log("Entra en dibuix-cercle");
                     dibuixaCercle(this.x, this.y, this.tamany/2);
                 }
                 if(figura == "quadrat"){
-                    console.log("Entra en dibuix-quadrat");
                     dibuixaQuadrat(this.x, this.y, this.tamany);
                 }
-                if(figura == "triangle"){
-                    console.log("Entra en dibuix-triangle");
-                    dibuixaTriangle(this.x, this.y, this.tamany);
+                if(figura == "pentagon"){
+                    dibuixaPentagon(this.x, this.y, this.tamany);
                 }
             }
         </script>

@@ -8,24 +8,27 @@ var nom;
 var color;
 
 function dibuixaCercle(x, y, tamany) {
-	console.log("Entra en circulo" + x + " " + y + " " + tamany)
 	ctx.beginPath();
 	ctx.arc(x, y, tamany, 0, 2*Math.PI);
 	ctx.stroke();
 }
 
 function dibuixaQuadrat(x, y, tamany) {
-	console.log("Entra en quadrat" + x + " " + y + " " + tamany)
 	ctx.beginPath();
 	ctx.rect(x-(tamany/2), y-(tamany/2), tamany, tamany);
 	ctx.stroke();
 }
 
-function dibuixaTriangle(x, y, tamany) {
-	console.log("Entra en triangle" + x + " " + y + " " + tamany)
+function dibuixaPentagon(x, y, tamany) {
+	var nombreDeCostats = 5,
+	    costat  = 2 * Math.PI / nombreDeCostats,
+	    canviDeCostat = (Math.PI / 180.0) * -18;
 	ctx.beginPath();
-
-	ctx.stroke();
+    for (var i = 0; i <= nombreDeCostats;i++) {
+        var costatActual = i * costat + canviDeCostat;
+        ctx.lineTo (Number(x) + tamany * Math.cos(costatActual), Number(y) + tamany * Math.sin(costatActual));
+    }
+    ctx.stroke();
 }
 
 function previsualitza() {
@@ -35,22 +38,18 @@ function previsualitza() {
 	this.tamany = document.getElementById("tamany").value;
 	this.nom = document.getElementById("nom").value;
 	this.color = document.getElementById("color").value;
-	console.log(figura,x,y,tamany,color);
 	ctx.strokeStyle = this.color;
 	dibuix(this.figura);
 }
 
 function dibuix(figura){
 	if(figura == "cercle"){
-		console.log("Entra en dibuix-cercle");
 		dibuixaCercle(this.x, this.y, this.tamany/2);
 	}
 	if(figura == "quadrat"){
-		console.log("Entra en dibuix-quadrat");
 		dibuixaQuadrat(this.x, this.y, this.tamany);
 	}
-	if(figura == "triangle"){
-		console.log("Entra en dibuix-triangle");
-		dibuixaTriangle(this.x, this.y, this.tamany);
-	}
+	if(figura == "pentagon"){
+        dibuixaPentagon(this.x, this.y, this.tamany);
+    }
 }
