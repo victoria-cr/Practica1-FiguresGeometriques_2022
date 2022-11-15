@@ -1,6 +1,5 @@
 package com.liceu.practica1.controllers;
 
-import com.liceu.practica1.model.Figura;
 import com.liceu.practica1.services.FiguraService;
 
 import javax.servlet.RequestDispatcher;
