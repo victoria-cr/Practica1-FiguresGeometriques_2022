@@ -18,11 +18,9 @@ public class UsuariFilter extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
         HttpSession session = req.getSession();
-
         if (session.getAttribute("usuariID") == null) {
             session.setAttribute("usuariID", usuariService.nouUsuari().getUsuariID());
         }
-
         chain.doFilter(req, res);
     }
 }
