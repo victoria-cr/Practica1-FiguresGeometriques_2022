@@ -10,7 +10,6 @@ public class FiguraDAOImpl implements FiguraDAO {
 
     public void guardarFigura(Figura figura) {
         figuresCreades.add(figura);
-        System.out.println(figuresCreades);
     }
 
     public List<Figura> getFiguresCreades() {
