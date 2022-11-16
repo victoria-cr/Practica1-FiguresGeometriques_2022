@@ -20,8 +20,6 @@ public class FiguresPerUsuari extends HttpServlet {
         HttpSession session = req.getSession();
         int usuariID = (int) (session.getAttribute("usuariID"));
         req.setAttribute("figureList", figuraService.retornarLlistaPerIDUsuari(usuariID));
-        System.out.println(figuraService.retornarLlista());
-        System.out.println(req.getParameter("figureList"));
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/lesMevesFigures.jsp");
         dispatcher.forward(req, resp);

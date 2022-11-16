@@ -17,8 +17,6 @@ public class FiguresCreades extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("figureList", figuraService.retornarLlista());
-        System.out.println(figuraService.retornarLlista());
-        System.out.println(req.getParameter("figureList"));
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/figuresCreades.jsp");
         dispatcher.forward(req, resp);

@@ -21,7 +21,6 @@ public class Figures extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        System.out.println((int) (session.getAttribute("usuariID")));
         usuari.setUsuariID((int) (session.getAttribute("usuariID")));
 
         RequestDispatcher dispatcher =
@@ -42,7 +41,6 @@ public class Figures extends HttpServlet {
         usuari.setUsuariID((int) session.getAttribute("usuariID"));
 
         Figura figura1 = new Figura(figura,coordenadaX,coordenadaY,tamany,nom,color,usuari.getUsuariID());
-        System.out.println(figura1);
         figuraService.crearFigura(figura1);
 
         RequestDispatcher dispatcher =
