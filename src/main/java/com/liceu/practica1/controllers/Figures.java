@@ -40,8 +40,8 @@ public class Figures extends HttpServlet {
         HttpSession session = req.getSession();
         usuari.setUsuariID((int) session.getAttribute("usuariID"));
 
-        Figura figura1 = new Figura(figura,coordenadaX,coordenadaY,tamany,nom,color,usuari.getUsuariID());
-        figuraService.crearFigura(figura1);
+        Figura figuraNova = new Figura(figura,coordenadaX,coordenadaY,tamany,nom,color,usuari.getUsuariID());
+        figuraService.crearFigura(figuraNova);
 
         RequestDispatcher dispatcher =
                 req.getRequestDispatcher("/WEB-INF/jsp/figures.jsp");
