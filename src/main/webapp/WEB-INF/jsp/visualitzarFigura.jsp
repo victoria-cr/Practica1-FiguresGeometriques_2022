@@ -70,7 +70,9 @@
 
     <main>
         <h1>Visualització de la figura</h1>
+
         <canvas id="canvas" width="1024" height="768" style="border:1px solid black;background-color: white;"></canvas>
+
         <script>
             const canvas = document.getElementById("canvas");
             const ctx = canvas.getContext("2d");
