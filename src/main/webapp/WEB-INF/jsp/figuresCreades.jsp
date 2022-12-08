@@ -120,6 +120,7 @@
                     <td>
                         <form action="/esborrarFigura" method="post">
                             <input type="hidden" value="${figureList.figuraID}" name="figuraID">
+                            <input type="hidden" value="${csrftoken}" name="csrftoken">
                             <input type="submit" value="Esborrar figura">
                         </form>
                     </td>
